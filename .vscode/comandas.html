@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comandas - Bar</title>
+<link rel="stylesheet" href="comandas.css">
+</head>
+<body>
+
+<nav>
+  <a href="estoque.html">Estoque</a> |
+  <a href="comandas.html">Comandas</a>
+</nav>
+<hr>
+
+<h1>Comandas do Bar</h1>
+
+<!-- Abrir nova comanda -->
+<section>
+  <h2>Abrir Nova Comanda</h2>
+  <input type="text" id="nomeCliente" placeholder="Nome do Cliente">
+  <button class="addProduct" onclick="abrirComanda()">Abrir Comanda</button>
+</section>
+
+<!-- Selecionar comanda aberta -->
+<section>
+  <h2>Adicionar Produto em Comanda</h2>
+  <select id="selectComandaAberta">
+    <option value="">Selecione a comanda</option>
+  </select>
+  <select id="selectCategoria" onchange="atualizarProdutosPorCategoriaSelecionada()">
+    <option value="">Selecione a categoria</option>
+  </select>
+  <select id="selectProduto">
+    <option value="">Selecione o produto</option>
+  </select>
+  <input type="number" id="quantidadeVenda" placeholder="Quantidade" step="0.1" min="0.1">
+  <button class="addItem" onclick="adicionarProdutoNaComandaSelecionada()">Adicionar</button>
+</section>
+
+<!-- Comandas abertas -->
+<section>
+  <h2>Comandas Abertas</h2>
+  <div id="listaComandas"></div>
+</section>
+
+<!-- Histórico de comandas fechadas -->
+<section>
+  <h2>Histórico de Comandas Fechadas</h2>
+  <button class="cleanHistoric" onclick="limparHistorico()">Limpar Histórico</button>
+  <div id="listaComandasFechadas"></div>
+</section>
+
+<!-- Relatório de vendas -->
+<section>
+  <h2>Relatório de Vendas Diárias</h2>
+  <div id="relatorioVendas">
+    <p><strong>Total Vendido Hoje:</strong> R$ <span id="totalVendidoHoje">0.00</span></p>
+    <button id="btnImprimirRelatorio">Imprimir Relatório</button>
+  </div>
+</section>
+
+<script src="comandas.js"></script>
+</body>
+</html>

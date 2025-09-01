@@ -1,0 +1,160 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* MENU */
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #2c3e50;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #4700ec;
+}
+
+/* SEÇÕES */
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* INPUTS E SELECTS */
+input, select {
+  padding: 10px;
+  width: 100%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4700ec;
+  box-shadow: 0 0 5px rgba(71,0,236,0.5);
+}
+
+/* BOTÕES */
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.addProduct, .register, .addItem, #btnAdicionarTemp {
+  background-color: #60bd23;
+  color: #fff;
+}
+
+.finish {
+  background-color: #4700ec;
+  color: #fff;
+}
+
+.cleanHistoric, #btnCancelarTemp {
+  background-color: #ec0000;
+  color: #fff;
+}
+
+/* TABELAS */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f7f7f7;
+}
+
+.low-stock {
+  background-color: #ffe6e6;
+}
+
+/* LISTAS */
+ul {
+  list-style: none;
+}
+
+#listaItensVenda li, #listaComandas li, #listaVendasComandas li {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+  }
+
+  button, input, select {
+    font-size: 0.9rem;
+  }
+}
