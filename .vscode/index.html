@@ -9,13 +9,14 @@
 <body>
 
 <nav>
-  <a href="estoque.html">Estoque</a> |
-  <a href="comandas.html">Comandas</a>
+  <a href="/index.html">Estoque</a> |
+  <a href="/comandas.html">Comandas</a>
 </nav>
 <hr>
 
 <h1>Gerenciamento de Estoque</h1>
 
+<!-- Formulário para cadastrar produto -->
 <section>
   <h2>Cadastrar Produto</h2>
   <input type="text" id="nomeProduto" placeholder="Nome do Produto">
@@ -37,26 +38,26 @@
   <button onclick="adicionarProduto()">Adicionar Produto</button>
 </section>
 
+<!-- Lista de produtos -->
 <section>
   <h2>Produtos em Estoque</h2>
   <button onclick="limparEstoque()">Limpar Estoque</button>
-  <div style="overflow-x:auto;">
-    <table border="1" cellpadding="5">
-      <thead>
-        <tr>
-          <th>Produto</th>
-          <th>Preço (R$)</th>
-          <th>Quantidade</th>
-          <th>Categoria</th>
-          <th>Unidade</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody id="tabelaEstoque"></tbody>
-    </table>
-  </div>
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço (R$)</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+        <th>Unidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaEstoque"></tbody>
+  </table>
 </section>
 
+<!-- Card de entradas e saídas -->
 <section>
   <h2>Registrar Entradas e Saídas</h2>
   <select id="produtoMovimento"></select>
@@ -67,13 +68,6 @@
   </select>
   <button onclick="registrarMovimento()">Registrar</button>
   <ul id="historicoMovimentos"></ul>
-</section>
-
-<section>
-  <h2>Backup de Dados</h2>
-  <button onclick="exportarDados()">Exportar Dados</button>
-  <input type="file" id="importFile" accept=".json">
-  <button onclick="importarDados()">Importar Dados</button>
 </section>
 
 <script src="estoque.js"></script>
